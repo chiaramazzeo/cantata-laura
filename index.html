@@ -6,14 +6,6 @@
   <title>Cantata per Laura</title>
   <meta name="description" content="Cantata per Laura — 26.05.26">
   <link rel="stylesheet" href="styles.css">
-  <script>
-    (function () {
-      if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("theme-dark");
-      }
-    })();
-  </script>
-  <meta name="theme-color" content="#ffffff" id="theme-color-meta">
 </head>
 <body>
   <div class="menu-overlay" data-menu-overlay hidden aria-hidden="true"></div>
@@ -43,19 +35,13 @@
   </nav>
 
   <header class="site-header">
-    <div class="header-actions">
-      <button type="button" class="theme-toggle icon-button" aria-label="Attiva tema scuro" aria-pressed="false">
-        <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">☀</span>
-        <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">☾</span>
-      </button>
-      <button type="button" class="menu-toggle icon-button" aria-expanded="false" aria-controls="menu-panel" aria-label="Apri indice brani">
-        <span class="menu-toggle-icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-    </div>
+    <button type="button" class="menu-toggle icon-button" aria-expanded="false" aria-controls="menu-panel" aria-label="Apri indice brani">
+      <span class="menu-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
     <div class="site-header-content">
       <h1>Cantata per Laura</h1>
       <p>26.05.26</p>
@@ -105,7 +91,7 @@
 <p class="line chorus">y un corazón muy grande,</p>
 <p class="line chorus">serrana mía,</p>
 <p class="line chorus">que a ti te quiera.</p>
-<p class="line translation">La la la…</p>
+<p class="line verse">La la la…</p>
 <div class="stanza-break" aria-hidden="true"></div>
 <p class="line translation">Traduzione:</p>
 <p class="line translation">Dicono che non mi ami perché sono povero, E forse un giorno il tuo amore mi raggiungerà.</p>
@@ -898,6 +884,5 @@
 <div class="stanza-break" aria-hidden="true"></div>
   </main>
   <script src="menu.js"></script>
-  <script src="theme.js"></script>
 </body>
 </html>

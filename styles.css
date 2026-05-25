@@ -27,20 +27,6 @@
   --space-section: 2.75rem;
 }
 
-html.theme-dark {
-  --text: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.78);
-  --bg: #0f2744;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface-hover: rgba(255, 255, 255, 0.1);
-  --border: rgba(255, 255, 255, 0.14);
-  --border-strong: rgba(255, 255, 255, 0.24);
-  --overlay: rgba(0, 0, 0, 0.55);
-  --shadow: rgba(0, 0, 0, 0.25);
-  --panel-shadow: rgba(0, 0, 0, 0.35);
-  color-scheme: dark;
-}
-
 *,
 *::before,
 *::after {
@@ -59,7 +45,6 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--line-height);
-  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .doc-content {
@@ -97,6 +82,16 @@ body {
   font-style: italic;
 }
 
+.doc-content .line:not(.chorus) + .line.chorus,
+.doc-content .line.chorus + .line:not(.chorus) {
+  margin-top: calc(var(--line-height) * 1em);
+}
+
+.doc-content .line:not(.translation) + .line.translation,
+.doc-content .stanza-break + .line.translation {
+  margin-top: calc(var(--line-height) * 1em);
+}
+
 .doc-content .line.muted {
   color: var(--text-muted);
 }
@@ -118,7 +113,7 @@ body {
 .site-header {
   position: relative;
   margin-bottom: clamp(2rem, 6vw, 3rem);
-  padding: 0 clamp(7rem, 16vw, 9rem) 1.5rem;
+  padding: 0 clamp(3.5rem, 11vw, 4.5rem) 1.5rem;
   border-bottom: 1px solid var(--border);
   text-align: center;
 }
@@ -127,13 +122,11 @@ body {
   min-width: 0;
 }
 
-.header-actions {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.site-header .menu-toggle {
+  position: fixed;
+  top: clamp(0.75rem, 3vw, 1.25rem);
+  right: clamp(1.25rem, 4vw, 4.5rem);
+  z-index: 250;
 }
 
 .site-header h1 {
@@ -186,23 +179,6 @@ body {
   height: 2px;
   background: currentColor;
   border-radius: 1px;
-}
-
-.theme-toggle-icon {
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
-.theme-toggle-icon--moon {
-  display: none;
-}
-
-html.theme-dark .theme-toggle-icon--sun {
-  display: none;
-}
-
-html.theme-dark .theme-toggle-icon--moon {
-  display: block;
 }
 
 .menu-overlay {
@@ -305,13 +281,13 @@ body.menu-open .menu-panel {
 
 @media (max-width: 520px) {
   .site-header {
-    padding-top: 3.75rem;
+    padding-top: 3.5rem;
     padding-inline: 1rem;
   }
 
-  .header-actions {
-    top: 0;
-    right: 0;
+  .site-header .menu-toggle {
+    top: clamp(0.75rem, 3vw, 1.25rem);
+    right: clamp(1rem, 4vw, 1.25rem);
   }
 
   .icon-button {
@@ -340,7 +316,7 @@ body.menu-open .menu-panel {
     padding: 1in;
   }
 
-  .header-actions,
+  .site-header .menu-toggle,
   .menu-overlay,
   .menu-panel {
     display: none;
