@@ -8,7 +8,7 @@ function openMenu() {
   panel.hidden = false;
   overlay.hidden = false;
   toggle.setAttribute("aria-expanded", "true");
-  toggle.setAttribute("aria-label", "Chiudi indice brani");
+  toggle.setAttribute("aria-label", "Chiudi indice");
   overlay.setAttribute("aria-hidden", "false");
   requestAnimationFrame(() => {
     document.body.classList.add("menu-open");
@@ -19,7 +19,7 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove("menu-open");
   toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-label", "Apri indice brani");
+  toggle.setAttribute("aria-label", "Apri indice");
   overlay.setAttribute("aria-hidden", "true");
   window.setTimeout(() => {
     panel.hidden = true;

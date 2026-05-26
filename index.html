@@ -7,13 +7,20 @@
   <meta http-equiv="Pragma" content="no-cache">
   <title>Cantata per Laura</title>
   <meta name="description" content="Cantata per Laura — 26.05.26">
-  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var l = document.createElement("link");
+      l.rel = "stylesheet";
+      l.href = "styles.css?v=" + Date.now();
+      document.head.appendChild(l);
+    })();
+  </script>
 </head>
 <body>
   <div class="menu-overlay" data-menu-overlay hidden aria-hidden="true"></div>
-  <nav id="menu-panel" class="menu-panel" aria-label="Indice brani" hidden>
+  <nav id="menu-panel" class="menu-panel" aria-label="Indice" hidden>
     <div class="menu-panel-header">
-      <h2>Brani</h2>
+      <h2>Indice</h2>
       <button type="button" class="menu-close" aria-label="Chiudi indice">×</button>
     </div>
     <ul class="menu-list">
@@ -37,7 +44,7 @@
   </nav>
 
   <header class="site-header">
-    <button type="button" class="menu-toggle icon-button" aria-expanded="false" aria-controls="menu-panel" aria-label="Apri indice brani">
+    <button type="button" class="menu-toggle icon-button" aria-expanded="false" aria-controls="menu-panel" aria-label="Apri indice">
       <span class="menu-toggle-icon" aria-hidden="true">
         <span></span>
         <span></span>
@@ -916,6 +923,12 @@
 <div class="stanza-break" aria-hidden="true"></div>
 <div class="stanza-break" aria-hidden="true"></div>
   </main>
-  <script src="menu.js"></script>
+  <script>
+    (function () {
+      var s = document.createElement("script");
+      s.src = "menu.js?v=" + Date.now();
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
