@@ -116,7 +116,8 @@ body {
 }
 
 .doc-content .line.chorus,
-.doc-content .line.muted {
+.doc-content .line.muted,
+.doc-content .line.alt {
   font-style: italic;
 }
 
