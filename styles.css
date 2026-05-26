@@ -1,9 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&display=swap");
+
+@font-face {
+  font-family: "Bogart Alt";
+  src: url("font/Bogart-Alt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bogart Alt";
+  src: url("font/Bogart-Alt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bogart Alt";
+  src: url("font/Bogart-Alt-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --font-serif: "DM Serif Text", Georgia, "Times New Roman", serif;
+  --font-serif-display: "Bogart Alt", "DM Serif Display", Georgia, serif;
+  --title-tracking: -0.02em;
+  --font-weight-titles: 600;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --text: #000000;
+  --text-title-color: #616eff;
   --text-muted: #333333;
   --bg: #ffffff;
   --surface: #fafafa;
@@ -53,10 +81,12 @@ body {
 }
 
 .doc-content .song-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif-display);
   font-size: var(--text-title);
-  font-weight: 400;
+  font-weight: var(--font-weight-titles);
   line-height: 1.2;
+  letter-spacing: var(--title-tracking);
+  color: var(--text-title-color);
   margin: var(--space-section) 0 0.85rem;
   scroll-margin-top: 4.5rem;
 }
@@ -130,12 +160,13 @@ body {
 }
 
 .site-header h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif-display);
   font-size: var(--text-heading);
-  font-weight: 400;
+  font-weight: var(--font-weight-titles);
   line-height: 1.15;
   margin: 0 0 0.35em;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--title-tracking);
+  color: var(--text-title-color);
   text-wrap: balance;
 }
 
@@ -218,9 +249,11 @@ body {
 }
 
 .menu-panel-header h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif-display);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-titles);
+  letter-spacing: var(--title-tracking);
+  color: var(--text-title-color);
   margin: 0;
 }
 
